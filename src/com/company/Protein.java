@@ -13,7 +13,8 @@ public class Protein implements Printable{
         this.className = className;
     }
 
-    public Protein() {
+    public Protein(String className) {
+        this.className = className;
     }
 
     @Override

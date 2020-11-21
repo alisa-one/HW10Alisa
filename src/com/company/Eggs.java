@@ -1,21 +1,28 @@
 package com.company;
 
-public class Eggs extends Protein{
+public class Eggs extends Protein {
 
 
-     private String LoadPoint;
+    private String loadPoint;
     private String sort;
-    private double setSize;
-    String className ="Eggs";
+    private int setSize;
 
-    public void Print() {
 
-        System.out.println("Предложение яйца куриные :  размер упаковки:  "+ setSize+", " +
-                "сорт: "+sort+",  пунт отпуска:  "+LoadPoint);
+    public Eggs(String className, String loadPoint, String sort, int setSize) {
+        super(className);
+        this.loadPoint = loadPoint;
+        this.sort = sort;
+        this.setSize = setSize;
+    }
+
+    @Override
+    public void print() {
+        System.out.println("Предложение:  "+super.getClassName()+ "  размер упаковки:  " + setSize + ", " +
+                "сорт: " + sort + ",  пунт отпуска:  " + loadPoint);
     }
 
     public String getLoadPoint() {
-        return LoadPoint;
+        return loadPoint;
     }
 
     public String getSort() {

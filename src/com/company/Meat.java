@@ -4,13 +4,21 @@ public class Meat extends Protein {
 
 
     private String ownerName;
-    private String KindOfAnimal;
-    private double MeatFat;
-    String className ="Meat";
-    public void Print() {
+    private String kindOfAnimal;
+    private double meatFat;
 
-        System.out.println("Предложение :   Мясо, вид:  " + KindOfAnimal +
-                ",  жирность: " + MeatFat + ", владелец: " + ownerName);
+
+    public Meat(String className, String ownerName, String kindOfAnimal, double meatFat) {
+        super(className);
+        this.ownerName = ownerName;
+        this.kindOfAnimal = kindOfAnimal;
+        this.meatFat = meatFat;
+    }
+
+    @Override
+    public void print() {
+        System.out.println("Предложение : " +super.getClassName()+ " вид:  " + kindOfAnimal +
+                ",  жирность: " + meatFat + ", владелец: " + ownerName);
     }
 
     public String getOwnerName() {
@@ -18,10 +26,10 @@ public class Meat extends Protein {
     }
 
     public String getKindOfAnimal() {
-        return KindOfAnimal;
+        return kindOfAnimal;
     }
 
     public double getMeatFat() {
-        return MeatFat;
+        return meatFat;
     }
 }
